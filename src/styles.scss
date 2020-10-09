@@ -1,0 +1,151 @@
+@import "variables";
+
+/* @media screen and (max-width:1280px) */
+
+/* @media screen and (min-width:1280px) */
+
+
+body {
+  background-color: $color-fondo;
+  color: $color-alternativo;
+  font-family: "Jost", sans-serif;
+  font-size: $tamanio-letra;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+header {
+  background-color: $color-fondo;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // padding-top: $espacio-interior;
+  // padding-bottom: $espacio-interior;
+  padding: 2em;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  // width: 50px;
+  // height: 50px;
+}
+
+.platform-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: $tamanio-letra-grande;
+  padding-left: $espacio-interior;
+  @media (max-width: 1280px) {
+    display: none;
+  }
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    font-size: $tamanio-letra-reducido;
+    padding-left: $espacio-interior;
+    padding-right: $espacio-interior;
+    margin-left: $espacio-exterior;
+    margin-right: $espacio-exterior;
+    border-radius: 4px;
+  }
+  div:hover {
+    background-color: $color-alternativo;
+    color: $color-fondo;
+    cursor: pointer;
+  }
+}
+
+#top-text::before {
+  @media (max-width: 1280px) {
+    content: "3";
+  }
+  @media (min-width: 1280px) {
+    content: "5";
+  }
+  font-weight: bold;
+}
+
+.section-title {
+  font-family: "Jost", sans-serif;
+  padding-top: $espacio-exterior-grande;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  @media (max-width: 1280px) {
+    flex-wrap: wrap;
+  }
+}
+
+.top-item {
+  min-width: 225px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .top-item {
+    display: none;
+  }
+
+  .top-item:nth-child(1) {
+    display: initial;
+  }
+
+  .top-item:nth-child(2) {
+    display: initial;
+  }
+
+  .top-item:nth-child(3) {
+    display: initial;
+  }
+}
+
+.first {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.second {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  min-width: 250px;
+  img {
+    flex: 1;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.item:hover {
+  flex: 1.4;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && parcel build src/index.html",
+    "start": "rimraf dist && parcel src/index.html --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel": "^1.12.4",
+    "sass": "^1.27.0"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
+}
