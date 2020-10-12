@@ -1,10 +1,7 @@
 @import "variables";
 
-/* @media screen and (max-width:1280px) */
 
-/* @media screen and (min-width:1280px) */
-
-
+/*BODY*/
 body {
   background-color: $color-fondo;
   color: $color-alternativo;
@@ -14,6 +11,7 @@ body {
   margin-top: 0px;
 }
 
+/*HEADER*/
 header {
   background-color: $color-fondo;
   position: sticky;
@@ -35,6 +33,7 @@ header {
 }
 
 .platform-title {
+  color: $color-buttons;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,11 +62,12 @@ header {
     border-radius: 4px;
   }
   div:hover {
-    background-color: $color-alternativo;
-    color: $color-fondo;
+    background-color: $color-buttons;
+    color: $color-alternativo;
     cursor: pointer;
   }
 }
+/*TITLES*/
 
 #top-text::before {
   @media (max-width: 1280px) {
@@ -77,6 +77,7 @@ header {
     content: "5";
   }
   font-weight: bold;
+  color: $color-buttons;
 }
 
 .section-title {
