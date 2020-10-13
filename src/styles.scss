@@ -4,7 +4,7 @@
 /*BODY*/
 body {
   background-color: $color-fondo;
-  color: $color-alternativo;
+  color: $color-dafault;
   font-family: "Jost", sans-serif;
   font-size: $tamanio-letra;
   padding: 0px;
@@ -19,17 +19,13 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // padding-top: $espacio-interior;
-  // padding-bottom: $espacio-interior;
-  padding: 2em;
+  padding: 1em;
 }
-
+/* TITULO & LOGO*/
 .header-logo {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  // width: 50px;
-  // height: 50px;
 }
 
 .platform-title {
@@ -37,7 +33,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: $tamanio-letra-grande;
+  font-size: $tamanio-letra-titulo;
   padding-left: $espacio-interior;
   @media (max-width: 1280px) {
     display: none;
@@ -46,30 +42,36 @@ header {
 
 .header-buttons {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  flex-direction: row;
   div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 4em;
-    font-size: $tamanio-letra-reducido;
+    height: 2.4em;
+    font-size: $tamanio-letra-buttons;
     padding-left: $espacio-interior;
     padding-right: $espacio-interior;
     margin-left: $espacio-exterior;
     margin-right: $espacio-exterior;
-    border-radius: 4px;
+    border-radius: 25px;
+    // border-radius: 4px;
   }
   div:hover {
     background-color: $color-buttons;
-    color: $color-alternativo;
+    color: $color-dafault;
     cursor: pointer;
   }
+  // .header-buttons a {
+  //   color: $color-dafault;
+    
+  // }
+  
 }
 /*TITLES*/
 
-#top-text::before {
+#top-content::before {
   @media (max-width: 1280px) {
     content: "3";
   }
@@ -78,11 +80,17 @@ header {
   }
   font-weight: bold;
   color: $color-buttons;
+  
 }
 
 .section-title {
   font-family: "Jost", sans-serif;
   padding-top: $espacio-exterior-grande;
+  padding: $padding;
+  
+  @media (max-width: 1920px) {
+    font-size: $tamanio-letra;
+  }
 }
 
 .top {
@@ -98,27 +106,27 @@ header {
 .top-item {
   min-width: 225px;
   img {
-    max-width: 100%;
+    max-width:  100%;
     max-height: 100%;
   }
 }
 
 @media (max-width: 1280px) {
-  .top-item {
-    display: none;
-  }
+.top-item {
+  display: none;
+}
 
-  .top-item:nth-child(1) {
-    display: initial;
-  }
+.top-item:nth-child(1) {
+  display: initial;
+}
 
-  .top-item:nth-child(2) {
-    display: initial;
-  }
+.top-item:nth-child(2) {
+  display: initial;
+}
 
-  .top-item:nth-child(3) {
-    display: initial;
-  }
+.top-item:nth-child(3) {
+  display: initial;
+}
 }
 
 .first {
@@ -126,6 +134,8 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  
+  padding: $padding;
 }
 
 .second {
@@ -134,13 +144,16 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  padding: $padding;
 }
 
 .item {
+  padding: 3.5px;
   flex: 1;
   display: flex;
   min-width: 250px;
   img {
+    border-radius: 4px;
     flex: 1;
     max-width: 100%;
     max-height: 100%;
@@ -148,5 +161,8 @@ header {
 }
 
 .item:hover {
-  flex: 1.4;
+  transition: transform .3s;
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);  
+    transform: scale(1.2);
 }
